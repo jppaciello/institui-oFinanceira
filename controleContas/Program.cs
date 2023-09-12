@@ -4,10 +4,10 @@ using controleContas;
 Conta conta1 = new Conta(654321);
 conta1.Saldo = 2341.42m;
 
-Console.WriteLine($"Deseja criar uma nova conta? \n 0 para não \n 1 para sim");
+Console.WriteLine($"Deseja criar uma nova conta? \n| 1 para não |\n| 2 para sim |");
 int r1 = int.Parse(Console.ReadLine());
 
-if (r1 == 1)
+if (r1 == 2)
 {
     Console.WriteLine("Informe os seus dados! \n");
 
@@ -141,3 +141,7 @@ else
 {
     Console.WriteLine("Você não possui contas");
 }
+Banco meuBanco = new Banco { Nome = "BancoUGB", Numero = 123 };
+Agencia minhaAgencia = new Agencia { Numero = 456, CEP = "12345-678", Telefone = "(24)9998888777" };
+Console.WriteLine($"Nome do seu banco: {meuBanco.Nome} / Número do banco: {meuBanco.Numero}");
+Console.WriteLine($"Número da sua agência: {minhaAgencia.Numero} / Cep da agência: {minhaAgencia.CEP} / Telefone da agência: {minhaAgencia.Telefone}");
